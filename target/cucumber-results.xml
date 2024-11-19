@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="47.396" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Realizar transferencia entre cuentas" name="Realizar transferencia sin seleccionar la cuenta" time="11.591">
+<system-out><![CDATA[
+Given al navegar hasta la url "https://demo.testfire.net/"..................passed
+When hacemos click en el link "//*[@id='LoginLink']/font"...................passed
+And coloca en el campo usuario "//*[@id='uid']" el texto "jsmith"...........passed
+And coloca en el campo password "//*[@id='passw']" el texto "Demo1234"......passed
+And hacer click sobre el boton Login "//*[@id='login']/table/tbody/tr[3]/td[2]/input".passed
+And hacer click en el link Transfer Funds "//*[@id='MenuHyperLink3']".......passed
+Given hacer click en el boton Transfer Money "//*[@id='transfer']"..........passed
+Then Presenta el mensaje de alerta "From Account and To Account fields cannot be the same.".passed
+]]></system-out>
+</testcase>
+<testcase classname="Realizar transferencia entre cuentas" name="Realizar transferencia correctamente" time="19.098">
+<system-out><![CDATA[
+Given al navegar hasta la url "https://demo.testfire.net/"..................passed
+When hacemos click en el link "//*[@id='LoginLink']/font"...................passed
+And coloca en el campo usuario "//*[@id='uid']" el texto "jsmith"...........passed
+And coloca en el campo password "//*[@id='passw']" el texto "Demo1234"......passed
+And hacer click sobre el boton Login "//*[@id='login']/table/tbody/tr[3]/td[2]/input".passed
+And hacer click en el link Transfer Funds "//*[@id='MenuHyperLink3']".......passed
+And Indicar la cuenta de cargo en From Account "//*[@id='fromAccount']"  en "800002 Savings".passed
+And Indica la cuenta beneficiaria en To Account "//*[@id='toAccount']" en  "800003 Checking".passed
+And Indicar monto a transferir en Amount TO to "//*[@id='transferAmount']" en "1000".passed
+And hacer click en el boton Transfer Money "//*[@id='transfer']"............passed
+Then El mensaje de resultados "//*[@id='_ctl0__ctl0_Content_Main_postResp']/span" debe contener "1000.0 was successfully transferred".passed
+]]></system-out>
+</testcase>
+<testcase classname="Realizar transferencia entre cuentas2" name="Realizar transferencia correctamente" time="16.281">
+<system-out><![CDATA[
+Given al navegar hasta la url "https://demo.testfire.net/"..................passed
+When hacemos click en el link "//*[@id='LoginLink']/font"...................passed
+And coloca en el campo usuario "//*[@id='uid']" el texto "jsmith"...........passed
+And coloca en el campo password "//*[@id='passw']" el texto "Demo1234"......passed
+And hacer click sobre el boton Login "//*[@id='login']/table/tbody/tr[3]/td[2]/input".passed
+And hacer click en el link Transfer Funds "//*[@id='MenuHyperLink3']".......passed
+And Indicar la cuenta de cargo en From Account "//*[@id='fromAccount']"  en "800002 Savings".passed
+And Indica la cuenta beneficiaria en To Account "//*[@id='toAccount']" en  "800003 Checking".passed
+And Indicar monto a transferir en Amount TO to "//*[@id='transferAmount']" en "1000".passed
+And hacer click en el boton Transfer Money "//*[@id='transfer']"............passed
+Then El mensaje de resultados "//*[@id='_ctl0__ctl0_Content_Main_postResp']/span" debe contener "1000.0 was successfully transferred".passed
+]]></system-out>
+</testcase>
+</testsuite>

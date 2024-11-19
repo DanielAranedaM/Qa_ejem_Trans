@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TestTransfer</td>
+              <td>1</td>
+            <td>16 nov 2024, 16:21</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.al_navegar_hasta_la_url(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="3703258966">3.703</td>
+              <td class="duration" data-value="3703258966">3.844</td>
+              <td class="duration" data-value="11109776900">11.109</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.coloca_en_el_campo_password_el_texto(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="395790866">0.395</td>
+              <td class="duration" data-value="395790866">0.589</td>
+              <td class="duration" data-value="1187372600">1.187</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.coloca_en_el_campo_usuario_el_texto(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="2402772766">2.402</td>
+              <td class="duration" data-value="2402772766">2.560</td>
+              <td class="duration" data-value="7208318300">7.208</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.el_mensaje_de_resultados_debe_contener(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3076523350">3.076</td>
+              <td class="duration" data-value="3076523350">3.100</td>
+              <td class="duration" data-value="6153046700">6.153</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.hacemos_click_en_el_link(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="410609766">0.410</td>
+              <td class="duration" data-value="410609766">0.514</td>
+              <td class="duration" data-value="1231829300">1.231</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.hacer_click_en_el_boton_transfer_money(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="328226300">0.328</td>
+              <td class="duration" data-value="328226300">0.488</td>
+              <td class="duration" data-value="984678900">0.984</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.hacer_click_en_el_link_transfer_funds(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="572342766">0.572</td>
+              <td class="duration" data-value="572342766">0.799</td>
+              <td class="duration" data-value="1717028300">1.717</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.hacer_click_sobre_el_boton_login(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="682919533">0.682</td>
+              <td class="duration" data-value="682919533">0.826</td>
+              <td class="duration" data-value="2048758600">2.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.indica_la_cuenta_beneficiaria_en_to_account_en(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="144491750">0.144</td>
+              <td class="duration" data-value="144491750">0.220</td>
+              <td class="duration" data-value="288983500">0.288</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.indicar_la_cuenta_de_cargo_en_from_account_en(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3179984850">3.179</td>
+              <td class="duration" data-value="3179984850">3.246</td>
+              <td class="duration" data-value="6359969700">6.359</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.indicar_monto_a_transferir_en_amount_to_to_en(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="248828700">0.248</td>
+              <td class="duration" data-value="248828700">0.411</td>
+              <td class="duration" data-value="497657400">0.497</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.presenta_el_mensaje_de_alerta(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="29701400">0.029</td>
+              <td class="duration" data-value="29701400">0.029</td>
+              <td class="duration" data-value="29701400">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.setUp()</td>
+              <td>3</td>
+              <td class="duration" data-value="1360425833">1.360</td>
+              <td class="duration" data-value="1360425833">2.043</td>
+              <td class="duration" data-value="4081277500">4.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DefinicionPasos.Transferencia.tearDown()</td>
+              <td>3</td>
+              <td class="duration" data-value="1334088566">1.334</td>
+              <td class="duration" data-value="1334088566">1.979</td>
+              <td class="duration" data-value="4002265700">4.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>14</td>
+            <td>36</td>
+            <td class="duration">1.302</td>
+            <td class="duration">11.109</td>
+            <td class="duration">46.900</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
